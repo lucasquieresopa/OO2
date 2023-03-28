@@ -1,0 +1,6 @@
+Ej3:
+¿Está bien implementado el adaptador?
+
+Ej4: 
+¿Pantano debería ser mixta?
+¿Esta bien que la composición este basada en una lista?
