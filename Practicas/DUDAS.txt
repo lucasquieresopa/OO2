@@ -4,3 +4,21 @@ Ej3:
 Ej4: 
 ¿Pantano debería ser mixta?
 ¿Esta bien que la composición este basada en una lista?
+
+Ej6:
+Es correcto repetir codigo en este caso? Temporario y Planta tienen variables y metodos comunes pero que no
+deben ser implementados en Pasante. Entonces tengo 3 opciones:
+
+1- pido a Pasante si esta casado aunque no lo pida el enunciado y no lo use, solo para poder
+llevar los metodos y variables repetidas a la clase Empleado
+
+2- hago una jerarquia para Temporario y Planta (que no sé como se llamaria)
+
+3- repito codigo en Temporario y Planta
+
+Ej7:
+Consultar si la resolución / planteo es correcto
+Consultar como es la manera correcta de hacer los tests
+
+Ej10:
+¿Está bien implementar metodos sin comportamiento como hice en 'Confirmada'?
