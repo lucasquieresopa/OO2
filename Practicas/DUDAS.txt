@@ -16,9 +16,6 @@ llevar los metodos y variables repetidas a la clase Empleado
 
 3- repito codigo en Temporario y Planta
 
-Ej7:
-Consultar si la resolución / planteo es correcto
-Consultar como es la manera correcta de hacer los tests
 
 Ej10:
 ¿Está bien implementar metodos sin comportamiento como hice en 'Confirmada'?
