@@ -1,0 +1,11 @@
+DUDA
+
+Es correcto repetir codigo en este caso? Temporario y Planta tienen variables y metodos comunes pero que no
+deben ser implementados en Pasante. Entonces tengo 3 opciones:
+
+1- pido a Pasante si esta casado aunque no lo pida el enunciado y no lo use, solo para poder
+llevar los metodos y variables repetidas a la clase Empleado
+
+2- hago una jerarquia para Temporario y Planta (que no sé como se llamaria)
+
+3- repito codigo en Temporario y Planta

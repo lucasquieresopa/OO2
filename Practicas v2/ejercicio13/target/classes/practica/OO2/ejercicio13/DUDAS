@@ -1,0 +1,9 @@
+¿Esta bien pasarle "user" a cada metodo para comprobar si está
+o no iniciada su sesion? (pedir correccion de como lo implementé)
+
+
+
+TEST: 
+Por qué no me deja instanciar un objeto de la interface DatabaseAccess? 
+En los test del ejemplo si lo deja
+Me obliga a instanciarlo especificando una subclase

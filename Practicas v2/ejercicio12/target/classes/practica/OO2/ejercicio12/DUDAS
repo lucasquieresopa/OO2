@@ -1,0 +1,4 @@
+Duda con UML:
+¿Si me dice que el máximo de Peliculas que devuelve es 3,
+tengo que indicarlo en el UML con : Peliculas [3]?? o lo dejo como [*]
+porque puede que sean menos de 3??

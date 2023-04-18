@@ -1,0 +1,22 @@
+@startuml
+abstract class ContenedorDeDatos <<component>>{
+- nombre : String
+- fechaDeCreacion : Date
+{abstract} int tamanoTotalOcupado()
+{abstract} Archivo archivoMasGrande()
+{abstract} Archivo archivoMasNuevo()
+}
+
+class Archivo <<leaf>> extends ContenedorDeDatos{
++int tamanoTotalOcupado()
++Archivo archivoMasGrande()
++Archivo archivoMasNuevo()
+}
+
+class Directorio <<composite>> extends Archivo{
++int tamanoTotalOcupado()
++Archivo archivoMasGrande()
++Archivo archivoMasNuevo()
++void agregar(contenido : ContenedorDeDatos)
+}
+@enduml

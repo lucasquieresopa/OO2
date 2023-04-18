@@ -1,0 +1,42 @@
+@startuml
+abstract class Sugeridor <<strategy>>{
+{abstract} sugerir(deco : Decodificador): Pelicula[*]
++noReproducidas(deco : Decodificador): Pelicula[*]
++noReproducidasOrdenadasPorAnioDescendente(deco : Decodificador): Pelicula[*]
+}
+
+class PorNovedad <<concreteStrategyA>> extends Sugeridor{
++sugerir(deco : Decodificador): Pelicula[*]
+}
+
+class PorSimilaridad <<concreteStrategyB>> extends Sugeridor{
++sugerir(deco : Decodificador): Pelicula[*]
+}
+
+class PorPuntaje <<concreteStrategyC>> extends Sugeridor{
++sugerir(deco : Decodificador): Pelicula[*]
+}
+
+class Pelicula{
++<<create>> Pelicula(titulo : String, anioEstreno : Integer, puntaje : Real)
++agregarPeliculaSimilar(pelicula : Pelicula)
++similarAReproducida(reproducidas : Pelicula[*]): Boolean
+-estaIncluida(listaDePeliculas : Pelicula[*]): Boolean
+}
+
+class Decodificador <<context>>{
++<<create>> Decodificador()
++configurarSugeridor(nuevoSugeridor : Sugeridor)
++sugerir(): Peliculas[*]
++establecerComoSimilares(p1 : Pelicula, p2 : Pelicula)
++fueReproducida(peli : Pelicula): Boolean
++marcarComoReproducida(peli : Pelicula)
++agregarAlCatalogo(peli : Pelicula)
+}
+
+Decodificador --> "catalogo*" Pelicula
+Decodificador --> "peliculasReproducidas*" Pelicula
+Decodificador --> "sugeridor" Sugeridor
+
+Pelicula --> "peliculasSimilares*" Pelicula
+@enduml

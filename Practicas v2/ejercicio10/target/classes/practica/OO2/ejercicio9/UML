@@ -1,0 +1,40 @@
+@startuml
+class Proyecto <<context>>{
+-nombre : String
+-fechaInicio : Date
+-fechaFin : Date
+-objetivo : String
+-margenDeGanancia : Real
+-numeroDeIntegrantes : Integer
+-pagoPorDiaPorIntegrante : Real
++aprobarEtapa()
++getCostoDeProyecto() : Real
++precioDelProyecto() : Real
++modificarMargenDeGanancia(nuevoMargen : Real)
++traducirMargenDeGanancia() : Real
++cancelarProyecto()
+}
+
+Proyecto --> "etapa" Etapa
+
+abstract class Etapa <<interface>>{
+{abstract} aprobarEtapa(pr : Proyecto)
+{abstract} modificarMargenDeGanancia(pr : Proyecto, nuevoMargen : Real)
++cancelarProyecto(pr : Proyecto)
+}
+
+class EnConstruccion <<concreteStrategyA>> extends Etapa{
++aprobarEtapa(pr : Proyecto)
++modificarMargenDeGanancia(pr : Proyecto, nuevoMargen : Real)
+}
+
+class EnEvaluacion <<concreteStrategyB>> extends Etapa{
++aprobarEtapa(pr : Proyecto)
++modificarMargenDeGanancia(pr : Proyecto, nuevoMargen : Real)
+}
+
+class Confirmada <<concreteStrategyC>> extends Etapa{
++aprobarEtapa(pr : Proyecto)
++modificarMargenDeGanancia(pr : Proyecto, nuevoMargen : Real)
+}
+@enduml

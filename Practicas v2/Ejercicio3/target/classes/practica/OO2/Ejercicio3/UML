@@ -1,0 +1,29 @@
+@startuml
+class MediaPlayer <<client>>{
+
+}
+
+class Media <<target>>{
+void play()
+}
+
+class Audio extends Media{
+void play()
+}
+
+class VideoFile extends Media{
+void play()
+}
+
+class VideoStream <<adaptee>>{
+void reproduce()
+}
+
+class VideoStreamAdapter <<adapter>> extends Media{
+void play()
+}
+
+MediaPlayer --> Media : media
+VideoStreamAdapter --> VideoStream : adaptee
+
+@enduml

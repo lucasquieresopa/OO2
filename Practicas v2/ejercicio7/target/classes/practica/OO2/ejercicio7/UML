@@ -1,0 +1,46 @@
+@startuml
+class ToDoItem <<context>>{
++void start()
++void togglePause()
++void finish()
++Duration workedTime()
++void addComment(comment : String)
+
+}
+
+abstract class State <<state>>{
+-comentarios : String[]
++switchToInProgress(tdi : ToDoItem)
++switchToPause(tdi : ToDoItem)
++switchToFinished(tdi : ToDoItem)
+{abstract} calcularTiempoTranscurrido(horaInicio : Clock)
++void agregarComentario(comentario : String)
+}
+
+class Pending <<concreteStateA>> extends State{
++switchToFinished(tdi : ToDoItem)
++switchToPause(tdi : ToDoItem)
+calcularTiempoTranscurrido(horaInicio : Clock)
+}
+
+class InProgress <<concreteStateB>> extends State{
++switchToFinished(tdi : ToDoItem)
++switchToPause(tdi : ToDoItem)
+calcularTiempoTranscurrido(horaInicio : Clock)
+}
+
+class Paused <<concreteStateC>> extends State{
++switchToFinished(tdi : ToDoItem)
++switchToPause(tdi : ToDoItem)
+calcularTiempoTranscurrido(horaInicio : Clock)
+}
+
+class Finished <<concreteStateD>> extends State{
++switchToPause(tdi : ToDoItem)
+calcularTiempoTranscurrido(horaInicio : Clock)
++void agregarComentario(comentario : String)
+}
+
+ToDoItem --> State
+
+@enduml

@@ -1,0 +1,30 @@
+@startuml
+class Biblioteca <<client>>{
++void agregarSocio(socio : Socio)
++String exportarSocios()
+}
+
+
+class Socio{
+-nombre : String
+-email : String
+-legado : String
+}
+
+class VoorheesExporter <<target>>{
++String exportar(socios : Socio[])
+-String exportar(socio : Socio)
+}
+
+class Exporter <<adapter>>{
++String exportar(socios : Socio[])
+}
+
+class JSONSimple <<adaptee>>{
+}
+
+Biblioteca --> Socio : socios*
+Biblioteca --> VoorheesExporter : exporter
+Exporter --|> VoorheesExporter
+Exporter --> JSONSimple
+@enduml

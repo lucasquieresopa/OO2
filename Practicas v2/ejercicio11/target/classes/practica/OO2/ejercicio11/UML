@@ -1,0 +1,61 @@
+@startuml
+class Dispositivo <<client>> <<context>>{
++<<create>> Dispositivo(crc_calc : CRC_Calculator, ringer : Ringer, connection : Connection, display : Display)
++send(data : String): String
++configurarCRC(newCRC_calc : CRC_Calculator)
++conectarCon(newConn : Connection)
+
+}
+
+
+abstract class CRC_Calculator <<strategy>>{
+#crcFor(data : String): Integer
+}
+
+class CRC16_Calculator <<concreteStrategyA>> extends CRC_Calculator {
++crcFor(datos : String): Integer
+}
+
+class CRC32_Calculator <<concreteStrategyB>> extends CRC_Calculator{
++crcFor(datos : String): Integer
+}
+
+interface Connection <<target>>{
+{abstract} sendData(data : String, crc : Integer): String
+{abstract} pict(): String
+}
+
+class WifiConn implements Connection{
+-pict : String
++<<create>> WifiConn(pict : String)
++sendData(data : String, crc : Integer): String
++pict(): String
+}
+
+class Adapter4G <<adapter>> implements Connection{
++<<create>> WifiConn(pict : String)
++sendData(data : String, crc : Integer): String
++pict(): String
+}
+
+class Connection4G <<adaptee>>{
+-symb : String
++transmit(data : String, crc : Integer): String
++symb(): String
+}
+
+class Display{
++showBanner(img : String): String
+}
+
+class Ringer{
++ring()
+}
+
+Dispositivo --> "ringer" Ringer
+Dispositivo --> "connection" Connection
+Dispositivo --> "crcCalculator" CRC_Calculator
+Dispositivo --> "display" Display
+Adapter4G --> "conection4G" Connection4G
+
+@enduml

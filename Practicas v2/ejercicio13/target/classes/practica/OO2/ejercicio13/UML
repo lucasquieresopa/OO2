@@ -1,0 +1,29 @@
+@startuml
+interface DatabaseAccess{
++getSearchResults(queryString : String, user Usuario): String[*]
++insertNewRow(rowData : String[*], user : Usuario): Integer
+}
+
+class DatabaseRealAccess extends DatabaseAccess{
++<<create>> DatabaseRealAccess()
++getSearchResults(queryString : String, user Usuario): String[*]
++insertNewRow(rowData : String[*], user : Usuario): Integer
+}
+
+class DatabaseProxy extends DatabaseAccess{
++<<create>> DatabaseProxy()
++getSearchResults(queryString : String, user Usuario): String[*]
++insertNewRow(rowData : String[*], user : Usuario): Integer
++chequearAccesso(user : Usuario): Boolean
++iniciarSesion(user : Usuario)
++cerrarSesion(user : Usuario)
+}
+
+class Usuario{
+-mail : String
+-contrasena : String
+}
+
+DatabaseProxy --> "sesionesIniciadas*" Usuario
+DatabaseProxy --> "database" DatabaseRealAccess
+@enduml

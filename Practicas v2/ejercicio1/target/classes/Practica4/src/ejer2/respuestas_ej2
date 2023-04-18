@@ -1,0 +1,26 @@
+a) Los recorridos en profundidad pueden ser
+-preOrden: raiz, hi, hd
+-inOrden: hi, raiz, hd
+-postOrden: hi, hd, raiz
+
+b) El unico recorrido posible para recorrer por niveles
+es el recorrido por niveles. Se utiliza una cola que desencola
+e imprimir los valores a medida que se llega al final de la lista.
+Puede usarse una marca cuando se llega a este fin (se reconoce el
+fin de una lista cuando esta == null) y un contador para ir teniendo
+un control de los niveles a la hora de imprimir
+
+c) la unica diferencia es que en los arboles binarios se pregunta
+si tiene hijo izq./der. antes de llamarlos, mientras que
+en los arboles generales se toma la lista de hijos, 
+la cual se recorrera hasta que no tenga mas hijos. En el caso
+de que la lista de hijos este vacia(arbol general), se la tomara pero no imprimira nada;
+a diferencia de los arboles binarios, que en caso de que no 
+tenga hijos(arbol binario), directamente no se llamará a sus hijos
+
+
+d) No existe una nocion de orden porque no existe un criterio
+de orden de los valores que lo componen.
+
+e) En ambos el grado del arbol es igual a la cantidad maxima
+de nodos que posee alguno de sus nodos. 
