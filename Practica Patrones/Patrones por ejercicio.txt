@@ -1,0 +1,19 @@
+Ej3:
+Solución -> patrón adapter
+
+Ej4
+Solución -> patrón composite
+
+Ej6:
+Solución -> patrón template
+
+
+Ej12:
+Solución: patrón strategy
+¿Se puede usar un patrón más para hacer mejor el código?
+
+Ej16:
+Solución: Builder
+
+Ej17:
+Strategy??????

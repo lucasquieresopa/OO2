@@ -1,0 +1,5 @@
+Ej 15 Decorator + Adapter -> pedir corrección de implementacion en Java
+
+Ej 16 Builder -> pedir corrección de implementacion en Java
+
+Ej 17 -> Strategy????
