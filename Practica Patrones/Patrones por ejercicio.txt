@@ -10,10 +10,13 @@ Solución -> patrón template
 
 Ej12:
 Solución: patrón strategy
-¿Se puede usar un patrón más para hacer mejor el código?
 
 Ej16:
 Solución: Builder
+
+a- Ventajas: varias implementación interna del producto, aislación de construcción y representación y control más fino sobre el proceso de construcción
+
+b- Habría que implementar un método en CalculadoraDeGanancias (director) o una clase "Traductor de JSON" para convertir el formato de los productos de JSON a una forma legible por el director.
 
 Ej17:
 Strategy??????
