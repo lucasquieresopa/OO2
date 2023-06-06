@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-06-06T15:52:17.225263Z</date>
+  <millis>1686066737225</millis>
+  <nanos>263000</nanos>
+  <sequence>0</sequence>
+  <logger>bbdd</logger>
+  <level>INFO</level>
+  <class>practica.OO2.fw_ej1.DatabaseProxy</class>
+  <method>getSearchResults</method>
+  <thread>1</thread>
+  <message>Busqueda exitosa</message>
+</record>
+<record>
+  <date>2023-06-06T15:52:17.237190800Z</date>
+  <millis>1686066737237</millis>
+  <nanos>190800</nanos>
+  <sequence>1</sequence>
+  <logger>bbdd</logger>
+  <level>INFO</level>
+  <class>practica.OO2.fw_ej1.DatabaseProxy</class>
+  <method>getSearchResults</method>
+  <thread>1</thread>
+  <message>Busqueda exitosa</message>
+</record>
+<record>
+  <date>2023-06-06T15:52:17.242174100Z</date>
+  <millis>1686066737242</millis>
+  <nanos>174100</nanos>
+  <sequence>2</sequence>
+  <logger>bbdd</logger>
+  <level>WARNING</level>
+  <class>practica.OO2.fw_ej1.DatabaseProxy</class>
+  <method>insertNewRow</method>
+  <thread>1</thread>
+  <message>Fila agregada</message>
+</record>
+<record>
+  <date>2023-06-06T15:52:17.243170900Z</date>
+  <millis>1686066737243</millis>
+  <nanos>170900</nanos>
+  <sequence>3</sequence>
+  <logger>bbdd</logger>
+  <level>INFO</level>
+  <class>practica.OO2.fw_ej1.DatabaseProxy</class>
+  <method>getSearchResults</method>
+  <thread>1</thread>
+  <message>Busqueda exitosa</message>
+</record>
+</log>
